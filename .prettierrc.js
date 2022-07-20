@@ -7,10 +7,10 @@ module.exports = {
     arrowParens: 'always',
     overrides: [
         {
-            files: '*.{js,jsx,tsx,ts,scss,json,html}',
+            files: './src/*.{js,jsx,tsx,ts,css,json,html}',
             options: {
                 tabWidth: 4,
             },
         },
-    ],
+    ]
 };

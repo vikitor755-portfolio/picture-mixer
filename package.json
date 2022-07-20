@@ -56,10 +56,10 @@
         "prettier": "^2.7.1"
     },
     "lint-staged": {
-        "*.{js,ts,tsx}": [
+        "./src/*.{js,ts,tsx}": [
             "eslint --quiet --cache --fix"
         ],
-        "*.{json,js,ts,jsx,tsx,html}": [
+        "./src/*.{json,js,ts,jsx,tsx,html}": [
             "prettier --write"
         ]
     }
