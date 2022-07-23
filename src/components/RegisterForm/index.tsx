@@ -1,12 +1,14 @@
 import { Button, FormHelperText, Input, InputLabel, Typography } from '@mui/material';
 import React, { FC } from 'react';
-import {CustomNavLink, FormContainer, SpacedFormControl} from '../CustomFormComponents';
+import Branding from '../Branding';
+import {CustomNavLink, FormContainer, FormTitle, SpacedFormControl} from '../CustomFormComponents';
 
 const RegisterForm: FC = () => {
     return(
             <FormContainer>
+                <Branding></Branding>
 
-                <Typography sx={{textAlign: "center"}} variant="h3" component="h1">Register</Typography>
+                <FormTitle text="Register"></FormTitle>
 
                 <SpacedFormControl>
                     <InputLabel htmlFor="email">Email address</InputLabel>

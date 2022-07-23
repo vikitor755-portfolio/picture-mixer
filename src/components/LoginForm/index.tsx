@@ -1,12 +1,14 @@
 import { Button, FormHelperText, Input, InputLabel, Typography } from '@mui/material';
 import React, { FC } from 'react';
-import {CustomNavLink, FormContainer, SpacedFormControl} from '../CustomFormComponents';
+import Branding from '../Branding';
+import {CustomNavLink, FormContainer, FormTitle, SpacedFormControl} from '../CustomFormComponents';
 
 const LoginForm: FC = () => {
     return(
             <FormContainer>
+                <Branding></Branding>
 
-                <Typography sx={{textAlign: "center"}} variant="h3" component="h1">Login</Typography>
+                <FormTitle text="Login"></FormTitle>
 
                 <SpacedFormControl>
                     <InputLabel htmlFor="email">Email address</InputLabel>

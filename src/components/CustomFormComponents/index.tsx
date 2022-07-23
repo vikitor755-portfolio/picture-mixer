@@ -1,4 +1,5 @@
-import { Container, darken, FormControl, styled } from "@mui/material";
+import { Container, darken, FormControl, styled, Typography } from "@mui/material";
+import { FC } from "react";
 import { NavLink } from "react-router-dom";
 
     const CustomNavLink = styled(NavLink)(
@@ -17,7 +18,7 @@ import { NavLink } from "react-router-dom";
             display: flex;
             width: 100vw;
             flex-direction: column;
-            height: 70vh;
+            height: 100vh;
             justify-content: center;
         `
         );
@@ -29,4 +30,12 @@ import { NavLink } from "react-router-dom";
             `
     );
 
-export {FormContainer, CustomNavLink, SpacedFormControl};
+    interface titleProps {
+        text: string
+    }
+
+    const FormTitle: FC<titleProps> = (props: titleProps) => {
+    return <Typography sx={{textAlign: "center"}} variant="h3" component="h1">{props.text}</Typography>
+    };
+
+export {FormContainer, CustomNavLink, SpacedFormControl, FormTitle};
