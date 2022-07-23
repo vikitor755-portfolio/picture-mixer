@@ -2,11 +2,11 @@ import { Button, FormHelperText, Input, InputLabel, Typography } from '@mui/mate
 import React, { FC } from 'react';
 import {CustomNavLink, FormContainer, SpacedFormControl} from '../CustomFormComponents';
 
-const LoginForm: FC = () => {
+const RegisterForm: FC = () => {
     return(
             <FormContainer>
 
-                <Typography sx={{textAlign: "center"}} variant="h3" component="h1">Login</Typography>
+                <Typography sx={{textAlign: "center"}} variant="h3" component="h1">Register</Typography>
 
                 <SpacedFormControl>
                     <InputLabel htmlFor="email">Email address</InputLabel>
@@ -18,13 +18,18 @@ const LoginForm: FC = () => {
                     <Input id="password" type="password" required/>
                 </SpacedFormControl>
 
+                <SpacedFormControl>
+                    <InputLabel htmlFor="confirm-password">Confirm password</InputLabel>
+                    <Input id="confirm-password" type="password" required/>
+                </SpacedFormControl>
+
                 <Button sx={{marginTop: "20px"}} variant='outlined'>
                             Login
                 </Button>
-                <FormHelperText>Don't have an account? <CustomNavLink to="/register">Register</CustomNavLink></FormHelperText>
+                <FormHelperText>Already have an account? <CustomNavLink to="/">Login</CustomNavLink></FormHelperText>
 
             </FormContainer>
         )
 };
 
-export default LoginForm;
+export default RegisterForm;
